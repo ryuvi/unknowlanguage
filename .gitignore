@@ -1,0 +1,36 @@
+# Bytecode do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Arquivos de log
+*.log
+
+# Arquivos de configuração locais
+*.sqlite3
+*.db
+*.env
+
+# Ferramentas de IDE (PyCharm, VSCode, etc)
+.vscode/
+.idea/
+
+# Arquivos de dependências
+venv/
+env/
+*.egg-info/
+
+# Arquivos de distribuição
+*.tar.gz
+*.egg
+*.whl
+
+# Pastas temporárias
+temp/
+tmp/
+
+# Arquivos de testes (caso você tenha dados temporários de testes)
+*.bak
+
+*.out
+parsetab.py

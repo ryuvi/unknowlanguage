@@ -1,0 +1,90 @@
+# Programming Language Name
+
+Welcome to the development repository of the programming language **[Your Language Name]**! This is an experimental project focused on creating a simple programming language using Python.
+
+## Purpose
+
+The goal of this project is to create a basic programming language that allows variable definition, simple arithmetic operations, and printing values to the screen. The syntax is designed to be simple and similar to other scripting or functional languages.
+
+## Features
+
+Currently, the language supports the following features:
+
+- **Variable definition** using the `assign` command.
+- **Display values** using the `show` command.
+- **Basic arithmetic operations** like addition.
+- **Basic code structures** using parentheses to define blocks.
+
+## Example Code
+
+Here is an example code in the language:
+
+```text
+(begin
+  (assign 1+1 sum)
+  (show sum)
+end)
+```
+
+In this example:
+- The command `assign 1+1 sum` creates the variable `sum` and stores the result of `1 + 1` in it.
+- The command `show sum` prints the value of `sum` (which would be `2`).
+
+## How to Use
+
+### 1. Prerequisites
+
+Before using the language, ensure that **Python 3.x** is installed on your system.
+
+### 2. Installing the Project
+
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/ryuvi/unknowlanguage.git
+cd unknowlanguage
+```
+
+### 3. Running the Code
+
+To test the language, run the main script:
+
+```bash
+python main.py
+```
+
+### 4. Running Tests
+
+The project includes basic tests to verify that the lexer, parser, and executor are working correctly.
+
+```bash
+# To run the tests
+pytest
+```
+
+## Contributing
+
+If you'd like to contribute to the project, follow these steps:
+
+1. Fork this repository.
+2. Create a branch for your modification:
+   ```bash
+   git checkout -b new-feature
+   ```
+3. Make your changes and add the modified files:
+   ```bash
+   git add .
+   ```
+4. Commit your changes:
+   ```bash
+   git commit -m "Description of the changes"
+   ```
+5. Push your changes to your forked repository:
+   ```bash
+   git push origin new-feature
+   ```
+6. Open a pull request explaining your changes.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
