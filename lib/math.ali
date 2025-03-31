@@ -1,0 +1,109 @@
+(begin
+    (function pow (base,exponential)
+        (assign 1 result)
+        (assign 0 index)
+
+        (if exponential < 0
+            (assign (1/base) base)
+            (assign -exponential exponential)
+        )
+
+        (while index < exponential
+            (assign (result * base) result)
+            (assign (index + 1) index)
+        )
+
+        (return result)
+    )
+
+    (function root (radicand,index)
+        (if index == 0
+            (show "0 Index sqrt is invalid")
+        )
+        (return (call pow (radicand,(1/index))))
+    )
+
+    (function abs (value)
+        (if value < 0
+            (return (value * (-1)))
+        )
+        (return (value))
+    )
+
+    (function sin (value)
+        (assign value result)
+        (assign value term)
+        (assign 1 n)
+        (assign -1 sign)
+
+        (while (call abs (term)) > (0.00001)
+            (assign ((term * (value * value)) / (n * (n + 1))) term)
+            (assign (result + (sign * term)) result)
+            (assign (n + 2) n)
+            (assign (sign * -1) sign)
+        )
+
+        (return result)
+    )
+
+    (function cos (value)
+        (assign 1 result)
+        (assign 1 term)
+        (assign 2 n)
+        (assign -1 sign)
+        (while ((call abs (term)) > 0.00001)
+            (assign ((term * (value * value)) / (n * (n + 1))) term)
+            (assign (result + (sign * term)) result)
+            (assign (n + 2) n)
+            (assign (sign * -1) sign)
+        )
+        (return result)
+    )
+
+    (function tan (value)
+        (assign ((call sin (value)) / (call cos (value)) result)
+        (return result)
+    )
+
+    (function pi ()
+        (return 3.141516)
+    )
+
+    (function polinomio (coeficientes, x)
+        (assign 0 result)
+        (for coef in coeficientes
+            (assign ((result * x) + coef))
+        )
+        (return result)
+    )
+
+    (function divisao_de_polinomio (P, Q)
+        (assign [] quociente)
+        (assign P resto)
+        (assign (P.length)-1 grau_p)
+        (assign (Q.length)-1 grau_q)
+        (assign (resto.length) rl)
+        (assign (Q.length) ql)
+        (while rl >= ql
+            (assign (resto[0] / Q[0]) coeficiente)
+            (assign (rl - ql) grau)
+            (assign (([coeficiente] + [0]) * grau) termo)
+            (call append (quociente, coeficiente))
+            (assign 0 termo_expandido)
+            (assign [] temp_list)
+            (for c in Q
+                (call append ((temp_list,coeficiente * c))
+            )
+            (assign ((temp_list + [0])*grau) termo_expandido)
+            (assign [] another_list)
+            (for i until rl
+                (assign (resto[i] - termo_expandido[i]) another_list)
+            )
+            (while (resto && (resto[0] == 0))
+                (call remove (temp_list, 0))
+            )
+        )
+        (return quociente, resto)
+    )
+
+end)

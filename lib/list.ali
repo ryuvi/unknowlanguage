@@ -1,0 +1,14 @@
+(begin
+    (function length (list)
+        (assign 1 count)
+        (for i in list
+            (assign (count + 1) count)
+        )
+        (return count)
+    )
+    (function append (list, item)
+        (assign (call length (list)) list_length)
+        (assign item list[list_length+1])
+        (return list)
+    )
+end)
